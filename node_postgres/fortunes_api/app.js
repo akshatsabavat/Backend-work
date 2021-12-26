@@ -10,6 +10,11 @@ app.get('/fortunes', (req, res) => {
 })
 //allows us to specify the endpoint and access fires the call back function after the endpoint is called
 
+app.get('/fortunes/random', (req, res) => {
+    console.log("Requesting random fortune");
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+})
+
 app.listen(port, () => {
     console.log(`Running at port : ${port}`);
 })
