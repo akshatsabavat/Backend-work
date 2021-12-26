@@ -13,6 +13,8 @@ app.get('/fortunes', (req, res) => {
 app.get('/fortunes/random', (req, res) => {
     console.log("Requesting random fortune");
     const randomIndex = Math.floor(Math.random() * fortunes.length);
+    const randomFortune = fortunes[randomIndex];
+    res.json(randomFortune);
 })
 
 app.listen(port, () => {
