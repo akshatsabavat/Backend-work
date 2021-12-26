@@ -1,11 +1,11 @@
 const http = require('http');
 //creates a server on the http(hyper text transfer protocall) format
-const hostname = 'FirstServe';
+const hostname = 'localhost';
 //hostname allows us to identify the server on different web apps eg. youtube.com ect..
-const port = 4100;
+const port = 3000;
 //portnumber for the server to shkow running processes
 const server = http.createServer((request ,response) => {
-    response.end('Welcome to Node my friends');
+    response.end('Welcome to Node!');
 })
 //createServer is a function to handle incoming request from the client and give back a response
 server.listen(port, hostname, () => {
