@@ -11,6 +11,10 @@ const server = http.createServer((request ,response) => {
     if(url === "/translations") {
         response.end("Your on translations");
     }
+
+    if(url === "/testEndPoint"){
+        response.end("Your on test endpoint");
+    }
     response.end('Welcome to Node!');
 })
 //createServer is a function to handle incoming request from the client and give back a response
