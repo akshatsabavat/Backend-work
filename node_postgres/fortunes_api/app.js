@@ -1,9 +1,14 @@
 const express = require('express');
 const fortunes = require('./data/fortunes.json');
 //creates and stores the express model in the express variable 
+const bodyParser = require('body-parser');
+//creates and stores the body parser to parse incoming json data
 const app = express();
 //creates the express application using the express function
 const port = 3000;
+
+app.use(bodyParser.json());
+//tells app to start parsing any incoming json data
 
 app.get('/fortunes', (req, res) => {
     res.json(fortunes);
