@@ -17,8 +17,8 @@ app.get('/fortunes/random', (req, res) => {
     res.json(randomFortune);
 })
 
-app.get('/fortunes:idNumber', (req, res) => {
-    console.log(req.params);
+app.get('/fortunes/:id', (req, res) => {
+    res.json(fortunes.find(fortune => fortune.id == req.params.id));
 })
 
 app.listen(port, () => {
