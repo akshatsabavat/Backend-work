@@ -26,15 +26,15 @@ app.get('/fortunes/:id', (req, res) => {
     res.json(fortunes.find(fortune => fortune.id == req.params.id));
 })
 
-app.post('/fortunes', (req, res) => {
-    console.log(req.body);
+// app.post('/fortunes', (req, res) => {
+//     console.log(req.body);
 
-    const { id, message, lucky_number, spirit_animal } = req.body;
-    const fortune_ids = fortune.map(fortune => fortune.id);
-    //mapping and getting all the fortune ids
-    const fortune = { id: (fortune_ids.length > 0 ? Math.max(...fortune_ids) : 0) + 1 , message, lucky_number, spirit_animal } ;
-    const new_fortunes = fortunes.concat(fortune);
-})
+//     const { id, message, lucky_number, spirit_animal } = req.body;
+//     const fortune_ids = fortune.map(fortune => fortune.id);
+//     //mapping and getting all the fortune ids
+//     const fortune = { id: (fortune_ids.length > 0 ? Math.max(...fortune_ids) : 0) + 1 , message, lucky_number, spirit_animal } ;
+//     const new_fortunes = fortunes.concat(fortune);
+// })
 
 app.listen(port, () => {
     console.log(`Running at port : ${port}`);
