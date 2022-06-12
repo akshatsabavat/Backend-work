@@ -2,6 +2,7 @@ const fortuneData = require("./data/fortunes.json");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const express = require("express");
+const { json } = require("body-parser");
 const port = 3000;
 
 const app = express();
@@ -72,6 +73,15 @@ app.put("/fortunes/:id", (req, res) => {
   writeToFortunes(fortuneData);
   res.json(fortuneData);
   console.log(fortuneData);
+});
+
+app.delete("/fortunes/:id", (req, res) => {
+  const { id } = req.params;
+  const new_fortunes = fortuneData.filter((f) => f.id != id);
+
+  writeToFortunes(new_fortunes);
+  console.log(new_fortunes);
+  res.json(new_fortunes);
 });
 
 app.listen(port, () => {

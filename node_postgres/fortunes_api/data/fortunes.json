@@ -22,5 +22,23 @@
     "message": "the train will come",
     "lucky_number": 64,
     "spirit_animal": "Breakfast"
+  },
+  {
+    "id": 5,
+    "message": "The terminator will be back",
+    "lucky_number": 49,
+    "spirit_animal": "shotgun"
+  },
+  {
+    "id": 6,
+    "message": "jupiter will ascend soon enough",
+    "lucky_number": 87,
+    "spirit_animal": "biscuits??"
+  },
+  {
+    "id": 7,
+    "message": "Jurrasic park will be good again",
+    "lucky_number": 0,
+    "spirit_animal": "Raptor"
   }
 ]
