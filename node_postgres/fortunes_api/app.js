@@ -50,6 +50,30 @@ app.post("/fortunes", (req, res) => {
   res.json(fortuneData);
 });
 
+app.put("/fortunes/:id", (req, res) => {
+  const { id } = req.params;
+  const old_fortune = fortuneData.find((f) => f.id == id);
+  // const { message, lucky_number, spirit_animal } = req.body;  --> not needed when optimized
+  //if gaurd clauses added to allow partial updating
+  //if put request doesnt include a change in a certain parameter, parameter retains the previous value
+
+  // if (message) fortuneData[id].message = message;
+  // if (lucky_number) fortuneData[id].lucky_number = lucky_number;
+  // if (spirit_animal) fortuneData[id].spirit_animal = spirit_animal;
+
+  //optimized code below (either postman doesnt work or my code is bad)
+  const parameters = ["message", "lucky_number", "spirit_animal"];
+  parameters.forEach((parameter) => {
+    if (req.body[parameter]) {
+      old_fortune[parameter] = req.body[parameter];
+    }
+  });
+
+  writeToFortunes(fortuneData);
+  res.json(fortuneData);
+  console.log(fortuneData);
+});
+
 app.listen(port, () => {
   console.log(`listening on port number: ${port}`);
 });
