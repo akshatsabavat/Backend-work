@@ -1,1 +1,26 @@
-[{"id":1,"message":"happiness will come dont worry","lucky_number":3,"spirit_animal":"dog"},{"id":2,"message":"the train will come","lucky_number":64,"spirit_animal":"Breakfast"},{"id":3,"message":"She will come back","lucky_number":44,"spirit_animal":"Lion"},{"id":4,"message":"the train will come","lucky_number":64,"spirit_animal":"Breakfast"}]
+[
+  {
+    "id": 1,
+    "message": "happiness will come dont worry",
+    "lucky_number": 3,
+    "spirit_animal": "dog"
+  },
+  {
+    "id": 2,
+    "message": "the train will come",
+    "lucky_number": 64,
+    "spirit_animal": "Breakfast"
+  },
+  {
+    "id": 3,
+    "message": "She will come back",
+    "lucky_number": 44,
+    "spirit_animal": "Lion"
+  },
+  {
+    "id": 4,
+    "message": "the train will come",
+    "lucky_number": 64,
+    "spirit_animal": "Breakfast"
+  }
+]
