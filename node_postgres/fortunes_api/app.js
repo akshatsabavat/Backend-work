@@ -2,7 +2,6 @@ const fortuneData = require("./data/fortunes.json");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const express = require("express");
-const { json } = require("body-parser");
 const port = 3000;
 
 const app = express();
